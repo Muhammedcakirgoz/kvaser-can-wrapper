@@ -4,7 +4,6 @@ use std::{thread, time::Duration};
 fn main() {
     initialize();
 
-    // Sanal kanallar genelde 0 ve 1 - birbirine bagli.
     let gonderen = open(0);
     let alan = open(1);
 
@@ -16,7 +15,6 @@ fn main() {
         return;
     }
 
-    // Kanallarin aktif hale gelmesi icin kisa bir bekleme.
     thread::sleep(Duration::from_millis(500));
 
     let mesaj = [0x11, 0x22, 0x33, 0x44];
